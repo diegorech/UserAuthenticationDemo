@@ -2,6 +2,7 @@
 
 Builded on NodeJS, MongoDB
 Using:
+<code>
 "dependencies": {
     "@hapi/joi": "^15.1.1",
     "bcryptjs": "^2.4.3",
@@ -11,6 +12,7 @@ Using:
     "mongoose": "^5.6.12",
     "nodemon": "^1.19.2"
   }
+   </code>
   
  <code> npm dev </code> to start server
  
