@@ -17,11 +17,14 @@ router.post('/register', async (req, res) => {
 
     //Checking if already exists
 
-    const emailExist = await User.findOne({
-        email: req.body.email
+    const userExist = await User.findOne({
+        $and: [
+            { username : req.body.username},// If there's a username
+            { email: req.body.email },      
+        ] 
     })
 
-    if ( emailExist ) return res.status(400).send('Email already exists')
+    if ( userExist ) return res.status(400).send('Email already exists')
 
 
     //Hash passwords
